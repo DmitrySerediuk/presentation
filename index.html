@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>NODE.JS presentation</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/serif.css">
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<img src="assets/img/nodejs.png" alt="node.js" class="logo">
+				<p>
+					<small>Created by Dmitry Serediuk</small>
+				</p>
+			</section>
+
+			<section>
+				<h2>QUESTIONS:</h2>
+				<p>
+					<img src="assets/img/questions.png" alt="node.js">
+				</p>
+			</section>
+
+			<section>
+				<section>
+					<h2>WHAT IS NODE.JS?</h2>
+					<p>Node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code
+						outside of a browser.</p>
+				</section>
+				<section>
+					<h2>ARCHITECTURE OF NODE.JS:</h2>
+					<img src="assets/img/architecture.png" alt="node.js">
+					<ul>
+						<li class="fragment">Chrome V8, is an open-source JavaScript engine developed for Google Chrome.</li>
+						<li class="fragment">libuv (Unicorn Velociraptor Library) is a multi-platform library for asynchronous I/O
+							based on event loops.</li>
+					</ul>
+				</section>
+			</section>
+
+			<section>
+				<h2>A PIECE OF HISTORY:</h2>
+				<img src="assets/img/Ryan-Dahl.jpg" alt="node.js" class="autor">
+				<p>Ryan Dahl: creator of Node.JS</p>
+				<ul>
+					<li class="fragment">Nov 2009, presentation of Node.JS</li>
+					<li class="fragment">Jan 2010, presentation of NPM</li>
+					<li class="fragment">Jul 2011, support of Windows</li>
+					<li class="fragment">Dec 2014, Node.JS = io.js + Node.JS</li>
+					<li class="fragment">Sep 2015, io.js + Node.JS = Node.JS</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>WHY NODE.JS IS POPULAR?</h2>
+				<ul>
+					<li class="fragment">Runs JS code.</li>
+					<li class="fragment">Works with files.</li>
+					<li class="fragment">Works with databases.</li>
+					<li class="fragment">Easy to start.</li>
+					<li class="fragment">Flexible.</li>
+					<li class="fragment">Many types of applications.</li>
+					<li class="fragment">Big community.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>WHO USE IT?</h2>
+				<ul>
+					<li>Microsoft</li>
+					<li>IBM</li>
+					<li>Yahoo</li>
+					<li>LinkedIn</li>
+					<li>PayPal</li>
+					<li>Netflix</li>
+					<li>SAP</li>
+					<li>etc...</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>HOW TO INSTALL?</h2>
+				<p class=""><img src="assets/img/install.png" alt="node.js"></p>
+				<ol>
+					<li>Go to nodejs.org</li>
+					<li>Download application</li>
+					<li>Install application</li>
+				</ol>
+			</section>
+
+			<section>
+				<section>
+					<h2>FIRST APPLICATION:</h2>
+					<pre class=" fragment"><code class="" data-trim data-line-numbers="4,8-11">
+						console.log('Hello World!');
+					</code></pre>
+				</section>
+				<section>
+					<h2>UPDATED APPLICATION:</h2>
+
+					<pre><code data-trim data-line-numbers="4,8-11">
+						const fs = require('fs');
+						fs.writeFile("/hello.out", "Hello World!", function(err) {
+							if(err) {
+								return console.log(err);
+							}
+						}); 
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>RUN IT:</h2>
+
+					<img src="assets/img/cmd.png" alt="node.js">
+				</section>
+
+				<section>
+					<h2>OUTPUT:</h2>
+
+					<img src="assets/img/output.png" alt="node.js">
+				</section>
+
+				<section>
+					<h2>TRY IT YOURSELF:</h2>
+
+					<img src="assets/img/cat.gif" alt="node.js">
+				</section>
+			</section>
+			<section data-background="">
+				<h2>THANK YOU!</h2>
+
+
+			</section>
+
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+</body>
+
+</html>

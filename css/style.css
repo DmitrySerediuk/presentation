@@ -1,0 +1,17 @@
+img{
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.slides section{
+  min-width: 100% !important;
+}
+
+h2{
+  font-size: 170% !important;
+  font-weight: bold !important;
+}
+
+.autor{
+  float: left;
+}
